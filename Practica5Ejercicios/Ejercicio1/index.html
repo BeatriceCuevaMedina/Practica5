@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro de Empleados</title>
+        <link href="./estilos.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="div-vent" id="vent">
+            <h3>Pago mensual</h3>
+            S/. <span id="mostrado"></span>
+        </div>
+        <div class="div-prin" id="blur">
+            <div class="div-sec">
+                <h1>Ingrese sus datos</h1>
+                <form id="formu" action="/my-handling-form-page" method="post">
+                    <ul>
+                     <li>
+                       <label for="name">Nombre</label>
+                       <input name="nombre" id="nombre" type="text">
+                     </li>
+                     <li>
+                       <label for="apel">Apellidos</label>
+                       <input name="apellido" id="apellido" type="text">
+                     </li>
+                     <li>
+                        <label for="dni">DNI</label>
+                        <input name="dni" id="dni" type="text">
+                      </li>
+                      <li>
+                        <label for="trab">Puesto</label>
+                        <select id="list" onchange="obtenerValor();">;
+                            <option value="defec">Escoja una opción...</option>
+                            <option value="direc">Directivo</option>
+                            <option value="medio">Cargo medio</option>
+                            <option value="super">Supervisión</option>
+                            <option value="tecn">Técnico</option>
+                            <option value="oper">Operativo</option>
+                        </select>
+                      </li>
+                      <li>
+                        <label for="hora" class="horaa">Horas por día</label>
+                        <input name="hora" id="hora" type="number" min="0">
+                      </li>
+                    </ul>
+                </form>
+                <div class="div-button">
+                    <button class="boton" id="btn" onclick="borroso()">Aceptar</button>
+                </div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
